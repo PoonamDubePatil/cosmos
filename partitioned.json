@@ -7,12 +7,12 @@
    ],
    "databases": [
      {
-       "name": "simple-db",
+       "name": "database1",
        "collections": [
          {
-           "name": "partitioned-with-sproc",
-           "partitionKey": "/dept",
-           "requestUnits": 1200,
+           "name": "collection1",
+           "partitionKey": "/partitionkey",
+           "requestUnits": 1500,
            "storedProcedures": [
              {
                "name": "oneSproc",
