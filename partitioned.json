@@ -1,1 +1,26 @@
-
+{
+   "$schema": "https://raw.githubusercontent.com/vplauzon/cosmos-db-target-config/master/documentation/cosmos-target-schema.json",
+   "destructiveFlags": [
+     "database",
+     "collection",
+     "storedProcedure"
+   ],
+   "databases": [
+     {
+       "name": "database1",
+       "collections": [
+         {
+           "name": "collection1",
+           "partitionKey": "/id",
+           "requestUnits": 1500,
+           "storedProcedures": [
+             {
+               "name": "oneSproc",
+               "targetUrl": "sproc1.js"
+             }
+           ]
+         }
+       ]
+     }
+   ]
+ }
