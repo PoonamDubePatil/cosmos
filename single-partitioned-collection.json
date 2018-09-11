@@ -2,7 +2,8 @@
    "$schema": "https://raw.githubusercontent.com/vplauzon/cosmos-db-target-config/master/documentation/cosmos-target-schema.json",
    "destructiveFlags": [
      "database",
-     "collection"
+     "collection",
+      "indexingPolicy"
        
    ],
    
