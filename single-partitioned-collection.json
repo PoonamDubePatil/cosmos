@@ -15,7 +15,7 @@
               {
            "name": "collection1",
            "partitionKey": "/partitionkey",
-           "requestUnits": 2000
+           "requestUnits": 3000
           
                }
        ],
