@@ -1,56 +1,64 @@
 {
    "$schema": "https://raw.githubusercontent.com/vplauzon/cosmos-db-target-config/master/documentation/cosmos-target-schema.json",
    "destructiveFlags": [
-     "database",
-     "collection",
-      "indexingPolicy"
+                           "database",
+                            "collection",
+                           "indexingPolicy"
        
-   ],
+                        ],
    
    "databases": [
-     {
+      {
        "name": "database1",
        "collections":
         [
          
-              {
-           "name": "collection1",
-           "partitionKey": "/partitionkey",
-           "requestUnits": 3000
+                          {
+                                           "name": "collection1",
+                                           "partitionKey": "/partitionkey",
+                                           "requestUnits": 3000,
+                                           "indexingPolicy":
+                                   [
+                                       {
+                                            "indexingMode": "consistent",
+                                             "automatic": true,
+                                            "includedPaths":  
+                                             [
+                                                      {
+                                                           "path": "/",
+                                                            "indexes":
+                                                                  [
+                                                                           {
+                                                                              "kind": "Range",
+                                                                              "dataType": "Number",
+                                                                              "precision": -1
+                                                                           },
+                                                                           {
+                                                                              "kind": "Hash",
+                                                                              "dataType": "String",
+                                                                               "precision": 3
+                                                                           }
+                                                                   ]
+                                                      }
+                                          ],
+    
+                                          "excludedPaths": 
+                                          [
+                                                     {
+                                                          "path": "/locationname/?"
+                                                      }
+       
+                                          ]
+                                 }
+                            ]
           
                }
-       ],
-       "indexingPolicy":
-        {
-    "indexingMode": "consistent",
-    "automatic": true,
-    "includedPaths": [
-        {
-            "path": "/",
-            "indexes": [
-                {
-                    "kind": "Range",
-                    "dataType": "Number",
-                    "precision": -1
-                },
-                {
-                    "kind": "Hash",
-                    "dataType": "String",
-                    "precision": 3
-                }
-            ]
-        }
-    ],
-    "excludedPaths": [
-        {
-            "path": "/locationname/?"
-        }
-    ]
-}
+       ]
+      
         
         
   }
-   ]
+  ]
    
    
  }
