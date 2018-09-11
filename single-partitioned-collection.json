@@ -4,8 +4,7 @@
      "database",
      "collection",
      "storedProcedure",
-      "writeRegionLocation",
-      "readRegionLocation"
+      
       
    ],
    "databases": [
