@@ -3,9 +3,7 @@
    "destructiveFlags": [
      "database",
      "collection",
-     "storedProcedure",
-      
-      
+       
    ],
    "databases": [
      {
@@ -15,16 +13,9 @@
          
               {
            "name": "collection1",
-           "partitionKey": "/id",
-           "requestUnits": 1500,
-           "storedProcedures":
-                          [
-                                      {
-                                       "name": "oneSproc",
-                                        "targetUrl": "sproc1.js"
-                                       }
-                               
-                           ]
+           "partitionKey": "/partitionkey",
+           "requestUnits": 2000,
+          
                }
        ]
         
