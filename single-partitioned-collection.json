@@ -7,16 +7,15 @@
   ],
   "databases": [
     {
-      "name": "database1",
+      "name": "db_WindTurbine",
       "collections": [
         {
-          "name": "collection1",
+          "name": "collection_RealTimeData",
           "partitionKey": "/partitionkey",
-          "requestUnits": 2400,
+          "requestUnits": 4000
           
         }
       ]
     }
   ]
 }
-
