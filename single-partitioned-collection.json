@@ -14,7 +14,12 @@
           "partitionKey": "/partitionkey",
           "requestUnits": 4000
           
-        }
+        },
+		{
+		  "name": "collection_ThresholdEventsData",
+          "partitionKey": "/partitionkey",
+          "requestUnits": 4000
+		}
       ]
     }
   ]
